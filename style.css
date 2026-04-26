@@ -1,0 +1,349 @@
+:root {
+    --bg: #FFF8F0;
+    --primary: #FF6B4A;
+    --accent: #FFD23F;
+    --navy: #1B2A4A;
+    --white: #FFFFFF;
+    --radius: 16px;
+    --shadow: 0 8px 24px rgba(255,107,74,0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 24px;
+}
+
+.logo {
+    font-size: 28px;
+    color: var(--primary);
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, background-color 0.2s;
+    font-size: 16px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background-color: var(--accent);
+    color: var(--navy);
+}
+
+/* Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.subheadline {
+    font-size: 20px;
+    color: #4A5568;
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.waitlist-form {
+    display: flex;
+    gap: 12px;
+    background: var(--white);
+    padding: 8px;
+    border-radius: calc(var(--radius) + 8px);
+    box-shadow: var(--shadow);
+    max-width: 480px;
+}
+
+.waitlist-form input, .waitlist-form select {
+    flex: 1;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    background: transparent;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Features */
+.features {
+    padding: 100px 24px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card .icon {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    margin-bottom: 16px;
+}
+
+/* How it Works */
+.how-it-works {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.how-it-works .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.how-it-works h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.steps {
+    list-style: none;
+}
+
+.steps li {
+    margin-bottom: 32px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.steps li::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--primary);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+body { counter-reset: step-counter; }
+
+.steps strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+code {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.quote-card {
+    background: var(--accent);
+    color: var(--navy);
+    padding: 48px;
+    border-radius: var(--radius);
+    transform: rotate(2deg);
+}
+
+.quote {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.author {
+    font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 120px 24px;
+}
+
+.cta-card {
+    background: var(--primary);
+    color: var(--white);
+    padding: 80px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.cta-card h2 {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+
+.cta-card p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-card .waitlist-form {
+    margin: 0 auto;
+}
+
+/* Feedback */
+.feedback {
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.feedback.success { color: #48BB78; }
+.feedback.error { color: #F56565; }
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 24px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-links a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .hero, .feature-grid, .how-it-works .split {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 { font-size: 48px; }
+    
+    .hero { text-align: center; }
+    .hero-content { display: flex; flex-direction: column; align-items: center; }
+    
+    .waitlist-form {
+        flex-direction: column;
+        padding: 16px;
+    }
+}

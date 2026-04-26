@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errorly - The Action Layer for Python Debugging</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="container">
+        <div class="logo">Errorly</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#waitlist" class="btn btn-secondary">Join Beta</a>
+        </div>
+    </nav>
+
+    <header class="hero container">
+        <div class="hero-content">
+            <span class="badge">Context-Aware Debugging</span>
+            <h1>Stop Guessing.<br><span class="text-primary">Index Your Codebase.</span></h1>
+            <p class="subheadline">Errorly finds the root cause of Python errors by reading your local config, .env variables, and cross-file dependencies. No more StackOverflow rabbit holes.</p>
+            
+            <form id="hero-form" class="waitlist-form">
+                <input type="email" name="email" placeholder="Enter your work email" required>
+                <button type="submit" class="btn btn-primary">Get Early Access</button>
+            </form>
+            <div id="form-feedback" class="feedback"></div>
+        </div>
+        <div class="hero-image">
+            <img src="images/high-fidelity-ui-mockup-of-a-technical-p.png" alt="Errorly Visualizing a Python Root Cause" class="main-visual">
+        </div>
+    </header>
+
+    <section id="features" class="features container">
+        <div class="section-header">
+            <h2>The Action Layer for Software.</h2>
+            <p>Generic AI misses context. Errorly maps your specific logic.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">🔍</div>
+                <h3>Cross-File Mapping</h3>
+                <p>Identifies when a KeyError in your view is actually caused by a missing field in a YAML config 5 directories away.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🏗️</div>
+                <h3>Environment Parsing</h3>
+                <p>Specifically indexes .env, pyproject.toml, and Dockerfiles to spot version mismatches instantly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">✅</div>
+                <h3>Verifiable Fixes</h3>
+                <p>Generates root-cause resolutions tailored to your business logic, not just generic syntax suggestions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="split">
+                <div class="copy">
+                    <h2>Fix errors in seconds, not hours.</h2>
+                    <ol class="steps">
+                        <li>
+                            <strong>Install the CLI</strong>
+                            <p>One-line setup in your terminal.</p>
+                            <code>pip install errorly</code>
+                        </li>
+                        <li>
+                            <strong>Run the Traceback</strong>
+                            <p>Errorly indexes your project and local environment.</p>
+                            <code>errorly analyze traceback.log</code>
+                        </li>
+                        <li>
+                            <strong>Get the Root Cause</strong>
+                            <p>Receive a verifiable code change and explanation.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="visual-quote">
+                    <div class="quote-card">
+                        <p class="quote">"Finally, an AI that understands my actual project structure instead of just guessing from the traceback."</p>
+                        <div class="author">— Senior API Engineer @ FinTech Startup</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist" class="cta-section container">
+        <div class="cta-card">
+            <h2>Ready to bridge the context gap?</h2>
+            <p>Join 100+ Python developers in our private beta. Launching 2026.</p>
+            <form id="footer-form" class="waitlist-form">
+                <input type="email" name="email" placeholder="Enter your work email" required>
+                <select name="role">
+                    <option value="" disabled selected>Your Role</option>
+                    <option value="backend">Backend Engineer</option>
+                    <option value="data">Data Engineer</option>
+                    <option value="ai">AI Developer</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Join the Waitlist</button>
+            </form>
+            <div id="footer-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <p>&copy; 2026 Errorly AI. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="mailto:samuel@baget.ai">Contact Support</a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
